@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" prefHeight="400.0" prefWidth="600.0">
+    <!-- Labels and TextFields -->
+    <Label layoutX="20.0" layoutY="20.0" text="Veículo (Placa):" />
+    <TextField layoutX="120.0" layoutY="20.0" fx:id="textFieldPlaca" />
+    
+    <Label layoutX="20.0" layoutY="50.0" text="Cliente:" />
+    <TextField layoutX="120.0" layoutY="50.0" fx:id="textFieldCliente" />
+    
+    <Label layoutX="20.0" layoutY="80.0" text="Modelo:" />
+    <TextField layoutX="120.0" layoutY="80.0" fx:id="textFieldModelo" />
+
+    <Label layoutX="320.0" layoutY="80.0" text="Marca:" />
+    <TextField layoutX="380.0" layoutY="80.0" fx:id="textFieldMarca" />
+
+    <Label layoutX="20.0" layoutY="110.0" text="Categoria:" />
+    <TextField layoutX="120.0" layoutY="110.0" fx:id="textFieldCategoria" />
+
+    <Label layoutX="20.0" layoutY="140.0" text="Data:" />
+    <TextField layoutX="120.0" layoutY="140.0" fx:id="textFieldData" />
+
+    <!-- ComboBox and Button -->
+    <Label layoutX="20.0" layoutY="170.0" text="Serviço:" />
+    <ComboBox layoutX="120.0" layoutY="170.0" fx:id="comboBoxServico" />
+    <Button layoutX="400.0" layoutY="170.0" text="Adicionar" fx:id="buttonAdicionar" />
+
+    <!-- TableView -->
+    <TableView layoutX="20.0" layoutY="200.0" prefHeight="150.0" prefWidth="550.0" fx:id="tableViewServicos">
+        <columns>
+            <TableColumn text="Serviço" prefWidth="200.0" />
+            <TableColumn text="Valor" prefWidth="100.0" />
+            <TableColumn text="Observações" prefWidth="250.0" />
+        </columns>
+    </TableView>
+
+    <!-- Labels for Summary -->
+    <Label layoutX="20.0" layoutY="360.0" text="Desconto (%):" />
+    <TextField layoutX="120.0" layoutY="360.0" fx:id="textFieldDesconto" />
+
+    <Label layoutX="320.0" layoutY="360.0" text="Valor:" />
+    <Label layoutX="380.0" layoutY="360.0" text="190,75" fx:id="labelValor" />
+
+    <Label layoutX="20.0" layoutY="390.0" text="Status:" />
+    <Label layoutX="120.0" layoutY="390.0" text="FECHADA" fx:id="labelStatus" />
+
+    <!-- Action Buttons -->
+    <Button layoutX="400.0" layoutY="390.0" text="Confirmar" fx:id="buttonConfirmar" />
+    <Button layoutX="480.0" layoutY="390.0" text="Cancelar" fx:id="buttonCancelar" />
+</AnchorPane>
+
