@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="509.0" prefWidth="734.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifsc.fln.controller.FXMLAnchoPaneOrdensServicoDialogController">
+    
+    <Label layoutX="24.0" layoutY="20.0" text="Veículo (Placa):" />
+    
+    <Label layoutX="64.0" layoutY="54.0" text="Cliente:" />
+    <TextField fx:id="textFieldCliente" layoutX="120.0" layoutY="50.0" prefHeight="25.0" prefWidth="543.0" />
+    
+    <Label layoutX="62.0" layoutY="84.0" text="Modelo:" />
+    <TextField fx:id="textFieldModelo" layoutX="120.0" layoutY="80.0" prefHeight="25.0" prefWidth="331.0" />
+
+    <Label layoutX="467.0" layoutY="84.0" text="Marca:" />
+    <TextField fx:id="textFieldMarca" layoutX="515.0" layoutY="80.0" />
+
+    <Label layoutX="48.0" layoutY="110.0" text="Categoria:" />
+    <TextField fx:id="textFieldCategoria" layoutX="120.0" layoutY="110.0" prefHeight="25.0" prefWidth="543.0" />
+
+    <Label layoutX="70.0" layoutY="140.0" text="Data:" />
+    <DatePicker fx:id="datePickerData" layoutX="120.0" layoutY="136.0" prefHeight="25.0" prefWidth="543.0" />
+
+    
+    <Label layoutX="55.0" layoutY="174.0" text="Serviço:" />
+    <ComboBox fx:id="comboBoxServico" layoutX="120.0" layoutY="170.0" prefHeight="25.0" prefWidth="188.0" promptText="Selecione um serviço..." />
+    <TextField fx:id="textFieldValorServico" layoutX="312.0" layoutY="170.0" prefHeight="25.0" prefWidth="80.0" promptText="Valor..." />
+    <TextField fx:id="textFieldObservacoes" layoutX="395.0" layoutY="170.0" prefHeight="25.0" prefWidth="132.0" promptText="Observações..." />
+    <Button fx:id="buttonAdicionar" layoutX="538.0" layoutY="170.0" prefHeight="25.0" prefWidth="126.0" text="Adicionar" />
+
+   
+    <TableView fx:id="tableViewServicos" layoutX="120.0" layoutY="206.0" prefHeight="150.0" prefWidth="543.0">
+        <columns>
+            <TableColumn fx:id="tableColumnServico" prefWidth="200.0" text="Serviço" />
+            <TableColumn fx:id="tableColumnValor" prefWidth="100.0" text="Valor" />
+            <TableColumn fx:id="tableColumnObservacoes" prefWidth="250.0" text="Observações" />
+        </columns>
+    </TableView>
+
+    
+    <Label layoutX="23.0" layoutY="373.0" text="Desconto (%):" />
+    <TextField fx:id="textFieldDesconto" layoutX="120.0" layoutY="369.0" prefHeight="25.0" prefWidth="543.0" />
+
+    <Label layoutX="59.0" layoutY="405.0" text="Valor:" />
+    <TextField fx:id="textFieldValorTotal" layoutX="120.0" layoutY="401.0" prefHeight="25.0" prefWidth="543.0" />
+
+    <Label layoutX="56.0" layoutY="437.0" text="Status:" />
+
+    
+    <Button fx:id="buttonConfirmar" layoutX="530.0" layoutY="467.0" text="Confirmar" />
+    <Button fx:id="buttonCancelar" layoutX="624.0" layoutY="467.0" text="Cancelar" />
+
+    
+    <ComboBox fx:id="comboBoxPesquisaPlaca" layoutX="120.0" layoutY="16.0" prefHeight="25.0" prefWidth="384.0" />
+    <Button fx:id="buttonPesquisarDados" layoutX="515.0" layoutY="16.0" onAction="#handleButtonPesquisarDados" prefHeight="25.0" prefWidth="149.0" text="Pesquisar Dados" />
+   <ChoiceBox fx:id="choiceBoxStatus" layoutX="120.0" layoutY="433.0" prefHeight="25.0" prefWidth="543.0" />
+</AnchorPane>

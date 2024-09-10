@@ -96,15 +96,22 @@ CREATE TABLE ordem_servico (
     FOREIGN KEY (cliente_id) REFERENCES Cliente(id)
 );
 
-CREATE TABLE item_oS (
-    id INT PRIMARY KEY,
-    valorServico DOUBLE,
-    observacoes TEXT,
-    ordemServico_id BIGINT,
-    servico_id INT,
-    FOREIGN KEY (ordemServico_id) REFERENCES OrdemServico(numero),
-    FOREIGN KEY (servico_id) REFERENCES servico(id)
-);
+ CREATE TABLE IF NOT EXISTS item_OS(
+ id int NOT NULL auto_increment,
+ valorServico decimal(10,2),
+ observacoes varchar(100),
+ id_servico INT NOT NULL,
+ id_ordem_servico INT NOT NULL,
+ CONSTRAINT pk_item_OS
+ PRIMARY KEY (id),
+ CONSTRAINT fk_item_OS_servico
+ FOREIGN KEY (id_servico)
+ REFERENCES servico(id),
+ CONSTRAINT fk_item_OS_ordem_servico
+ FOREIGN KEY (id_ordem_servico)
+ REFERENCES ordem_servico(numero)
+ ON DELETE CASCADE
+ )ENGINE = InnoDB;
 
 CREATE TABLE Pontuacao (
     id INT PRIMARY KEY,
